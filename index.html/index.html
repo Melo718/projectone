@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Meck Biking Buddy</title>
   <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
-  <style type="text/css">
+  
    
   </style>
   </head>
@@ -16,18 +14,43 @@
       <nav>
         <ul>
           <li>
-           <a href="#">My Rides</a>
+            <a href="#">My Rides</a>
           </li>
           <li>
-           <a href="#">My Reviews</a>
+            <a href="#">My Reviews</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <section id="map" class="map-container">
+   </section>
+   <!-- jQuery JS -->
+   <script src="https://code.jquery.com/jquery.js"></script>
+   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script> -->
+   <!--JavaScript File-->
+    <script type=".text/javascript">
+  
+    $("button").on("click", function() {
+      
+    var info = $(this).attr("more-info");
 
-    </section>
-    <script src="./script.js"></script>
+    var APIKey = "KmBywIxjpaANpeIoitPkPtCDXEIZZxDJ";
+
+    
+    var queryURL = "https://www.ncdc.noaa.gov/cdo-web/api/v2/locations/weather?=" + "q=Charlotte,NorthCarolina&appid=" + APIKey;
+  
+      
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+      })
+        
+      .then(function(response) {
+  
+          
+      console.log(queryURL);
+
+
   </body>
 </html>
