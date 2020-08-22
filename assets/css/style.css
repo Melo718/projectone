@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: gray
+}
+
+header {
+    background-color: black;
+    padding: 10px 5px;
+}
+
+header h1 {
+    color: white;
+    display: block;
+    text-align: center;
+}
