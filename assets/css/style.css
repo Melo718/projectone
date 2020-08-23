@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    color: blue;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: gray
-}
-
 header {
     background-color: black;
     padding: 10px 5px;
@@ -36,5 +30,29 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0 5px;
+    padding: 10px;
+}
+
+body {
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: gray;
+    padding: 5px;
+    text-align: center;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+}
+
+.map {
+    flex: 1;
+}
+
+footer {
+    text-align: center;
     padding: 10px;
 }
