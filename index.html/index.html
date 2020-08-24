@@ -8,8 +8,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
   <style type="text/css">
+=======
+  
+
    
   </style>
+
+
   </head>
   <body>
     <header>
@@ -17,10 +22,10 @@
       <nav>
         <ul>
           <li>
-           <a href="#">My Rides</a>
+            <a href="#">My Rides</a>
           </li>
           <li>
-           <a href="#">My Reviews</a>
+            <a href="#">My Reviews</a>
           </li>
         </ul>
         <div class="form-group">
@@ -39,9 +44,51 @@
     <div class="container">
       <div class="row">
 
+
     <section id="map" class="map-container">
+   </section>
+   <!-- jQuery JS -->
+   <script src="https://code.jquery.com/jquery.js"></script>
+   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script> -->
+   <!--JavaScript File-->
+    <script type=".text/javascript">
+  
+    $("button").on("click", function() {
+      
+    var info = $(this).attr("more-info");
+
+    var APIKey = "KmBywIxjpaANpeIoitPkPtCDXEIZZxDJ";
+
+    
+    var queryURL = "https://www.ncdc.noaa.gov/cdo-web/api/v2/locations/weather?=" + "q=Charlotte,NorthCarolina&appid=" + APIKey;
+  
+      
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+      })
+        
+      .then(function(response) {
+  
+          
+      console.log(queryURL);
+
+
+
+    <main id="map-conta" class="container">
+      <div id="map" class="map"></div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAnMgdCdZHfBYWb1ASE4k7mQrvSwKK3Es&callback=init"></script>
+
+    <br><hr>
+    <footer>
+      August 2020 - Made by Adam, Camilo, and Felicia
+    </footer>
 
     </section>
   
+=======
   </body>
 </html>
