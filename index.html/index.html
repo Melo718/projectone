@@ -1,25 +1,16 @@
 <!DOCTYPE html>
-<html>
+
   <head>
     <meta charset="UTF-8">
     <title>Meck Biking Buddy</title>
-  <!-- Compressed CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-  <!-- Compressed JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
-  <script src="../assets/js/script.js"></script>
-=======
-  
-
-   
-  </style>
-
-
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src= "../assets/js/script.js"></script>
+    
+    <style type="text/css"></style>
   </head>
-  
   <body>
     <header>
       <h1>Meck Biking Buddy</h1>
@@ -32,67 +23,56 @@
             <a href="#">My Reviews</a>
           </li>
         </ul>
-        <div class="form-group">
-          <label for="search">Enter a City:</label>
-          <input type="text" placeholder="Search.." name="search"> 
-          <button type="submit" class="btn btn-success" id="run-search">
-          <i class="fa fa-search"></i> Search</button>
-          <button type="submit" class="btn btn-success" id="clear-search">
-          Clear Searches</button>
-        </div>
       </nav>
     </header>
-    <div class="container">
-
-
-    <div class="container">
-      <div class="row">
-
-
-    <section id="map" class="map-container">
-   </section>
-   <!-- jQuery JS -->
-   <script src="https://code.jquery.com/jquery.js"></script>
-   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script> -->
-   <!--JavaScript File-->
-    <script type=".text/javascript">
-  
-    $("button").on("click", function() {
-      
-    var info = $(this).attr("more-info");
-
-    var APIKey = "KmBywIxjpaANpeIoitPkPtCDXEIZZxDJ";
-
     
-    var queryURL = "https://www.ncdc.noaa.gov/cdo-web/api/v2/locations/weather?=" + "q=Charlotte,NorthCarolina&appid=" + APIKey;
+
+    <div class="notification"></div>
+    <div class="weather-container">
+      <div class="weather-icon">
+        <img src="./../assets/icons/unknown.png" alt="test">
+      </div>
+      <div class= "temp-value">
+        <p>- °<span>F</span></p>
+      </div>
+      <div class="temp-description">
+        <p>-</p>
+      </div>
+      <div class="location">
+        <p>-</p>
+      </div>
+    </div>
+    
   
+    
+    
+    
+    <section id="map" class="map-container">
+      <main id="map-conta" class="container">
+        <div id="map" class="map"></div>
+      </main>
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAnMgdCdZHfBYWb1ASE4k7mQrvSwKK3Es&callback=init">
+        function init() {
+          new google.maps.Map(document.getElementById('map'), {
+           center: { lat: 35.2271, lng: -80.8431 },
+           zoom: 10
+          });
+        }
       
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-      })
-        
-      .then(function(response) {
-  
-          
-      console.log(queryURL);
-
-
-
-    <main id="map-conta" class="container">
-      <div id="map" class="map"></div>
-    </main>
-
-    <script src="../assets/js/script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAnMgdCdZHfBYWb1ASE4k7mQrvSwKK3Es&callback=init"></script>
-
-    <br><hr>
-    <footer>
-      August 2020 - Made by Adam, Camilo, and Felicia
-    </footer>
+      
+      </script>
 
     </section>
-  
-=======
+    
+    <br><hr>
+
+
   </body>
-</html>
+      <footer>
+        August 2020 - Made by Adam, Camilo, and Felicia
+      </footer>
+
+</html> 
+              
+              
