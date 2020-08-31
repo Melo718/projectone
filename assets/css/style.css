@@ -17,8 +17,8 @@ header
     background: rgb(0, 65, 50);
     margin: 0;
     padding: 10px;
-    height: 60px;
-    text-align: left;
+    height: 80px;
+    text-align: center;
 }
 
 #mbb-logo {
@@ -92,7 +92,28 @@ fieldset {
     flex: 1;
 }
 
+#localTrails {
+    height: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    column-count: 2;
+    overflow: scroll;
+
+}
+
+#localTrails img {
+    height: 100px;
+}
+
 footer {
     text-align: center;
     padding: 10px;
+}
+
+@media (min-width: 640px) {
+    header
+    .top-bar{
+        height: 60px;
+        text-align: left;
+    }
 }
